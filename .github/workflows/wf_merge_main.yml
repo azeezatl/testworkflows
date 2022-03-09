@@ -19,7 +19,7 @@ jobs:
     
     - name: Merge main back to test
       run: |
-          git fetch --all
+          git fetch --unshallow
           git checkout test
           git pull
           git merge --no-ff main -m "Auto-merge main back to test"
