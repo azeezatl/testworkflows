@@ -19,8 +19,8 @@ jobs:
     
     - name: Merge main back to test
       run: |
-          git fetch
+          git fetch --all
           git checkout test
           git pull
-          git merge --no-ff main -m "Auto-merge main back to test" --allow-unrelated-histories
+          git merge --no-ff main -m "Auto-merge main back to test"
           git push  
