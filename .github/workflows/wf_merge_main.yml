@@ -1,0 +1,26 @@
+name: wf_dev_adb_delta_deploy
+on:
+  push:
+    branches:
+      - main
+      
+  workflow_dispatch:
+                
+jobs:
+  merge-master-back-to-dev:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set Git config
+      run: |
+          git config --local user.email "azeezat.a.lawal@gmail.com"
+          git config --local user.name "AL"
+    
+    - name: Merge master back to dev
+      run: |
+          git fetch
+          git checkout test
+          git pull
+          git merge --no-ff main -m "Auto-merge main back to test"
+          git push  
