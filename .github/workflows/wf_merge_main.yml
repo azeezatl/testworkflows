@@ -1,4 +1,4 @@
-name: wf_dev_adb_delta_deploy
+name: wf_merge_main
 on:
   push:
     branches:
