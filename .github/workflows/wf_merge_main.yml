@@ -15,7 +15,7 @@ jobs:
     - name: Set Git config
       run: |
           git config --local user.email "azeezat.a.lawal@gmail.com"
-          git config --local user.name "D2"
+          git config --local user.name "A1"
     
     - name: Merge main back to test
       run: |
