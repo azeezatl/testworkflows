@@ -17,7 +17,7 @@ jobs:
           git config --local user.email "azeezat.a.lawal@gmail.com"
           git config --local user.name "AL"
     
-    - name: Merge master back to dev
+    - name: Merge main back to test
       run: |
           git fetch
           git checkout test
