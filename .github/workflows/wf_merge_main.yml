@@ -23,4 +23,4 @@ jobs:
           git checkout test
           git pull
           git merge --no-ff main -m "Auto-merge main back to test"
-          git push  
+          git push --force
